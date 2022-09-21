@@ -8,7 +8,6 @@ import java.util.List;
 public interface PersonaBinarioCreatePort {
 
     /**
-     *
      * @return List
      * @throws Exception
      */

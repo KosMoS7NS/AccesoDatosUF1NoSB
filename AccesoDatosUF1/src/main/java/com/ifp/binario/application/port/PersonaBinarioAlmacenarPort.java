@@ -10,12 +10,11 @@ import java.util.List;
  */
 public interface PersonaBinarioAlmacenarPort {
 
-        /**
-         *
-         * @param personaBinarioOutputDTOList Lista de PersonaBinarioOutputDTO
-         * @return List
-         * @throws IOException
-         */
-        boolean almacenarBinario(List<PersonaBinarioOutputDTO> personaBinarioOutputDTOList) throws IOException;
+    /**
+     * @param personaBinarioOutputDTOList Lista de PersonaBinarioOutputDTO
+     * @return List
+     * @throws IOException
+     */
+    boolean almacenarBinario(List<PersonaBinarioOutputDTO> personaBinarioOutputDTOList) throws IOException;
 
 }

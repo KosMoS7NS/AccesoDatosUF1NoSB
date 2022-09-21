@@ -12,8 +12,7 @@ import java.util.List;
  */
 public interface PersonaBinarioLeerPort {
     /**
-     *
-     * @param ruta del fichero.dat
+     * @param ruta Ruta del fichero.dat
      * @return List
      * @throws IOException
      * @throws ClassNotFoundException
@@ -21,10 +20,10 @@ public interface PersonaBinarioLeerPort {
     List leerBinario(String ruta) throws IOException, ClassNotFoundException;
 
     /**
-         * @param ruta Ruta del fichero.dat
-         * @param nombre Nombre de la persona a buscar en el fichero.dat
-         * @return List
-         * @throws IOException
-         */
+     * @param ruta Ruta del fichero.dat
+     * @param nombre Nombre de la persona a buscar en el fichero.dat
+     * @return List
+     * @throws IOException
+     */
     List leerFicheroNombre(String ruta, String nombre) throws IOException, ClassNotFoundException;
 }
