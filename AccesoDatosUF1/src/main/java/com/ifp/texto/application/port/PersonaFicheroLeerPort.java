@@ -13,7 +13,6 @@ import java.util.List;
 public interface PersonaFicheroLeerPort {
 
     /**
-     *
      * @param ruta Ruta del fichero.txt
      * @return List
      * @throws IOException
@@ -21,7 +20,6 @@ public interface PersonaFicheroLeerPort {
     List leerFichero(String ruta) throws IOException;
 
     /**
-     *
      * @param ruta Ruta del fichero.txt
      * @param nombre Nombre a buscar en el fichero.txt
      * @return List

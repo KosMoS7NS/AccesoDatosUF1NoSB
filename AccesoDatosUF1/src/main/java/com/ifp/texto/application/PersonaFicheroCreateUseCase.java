@@ -4,8 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-import com.ifp.shared.configuration.PersonaStaticConfig;
-import com.ifp.texto.application.port.PersonaCreatePort;
+import com.ifp.texto.application.port.PersonaFicheroCreatePort;
 import com.ifp.texto.infrastructure.dto.input.PersonaInputDTO;
 
 import static com.ifp.shared.configuration.PersonaStaticConfig.*;
@@ -15,7 +14,7 @@ import static com.ifp.shared.port.PersonaMapperPort.INSTANCE;
 /**
  * Clase con el método de creación de las Personas.
  */
-public class PersonaCreateUseCase implements PersonaCreatePort {
+public class PersonaFicheroCreateUseCase implements PersonaFicheroCreatePort {
 
     /**
      * Se realiza un Scaner para capturar la información del usuario.

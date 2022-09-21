@@ -8,10 +8,10 @@ import com.ifp.binario.application.port.PersonaBinarioCreatePort;
 import com.ifp.binario.application.port.PersonaBinarioLeerPort;
 import com.ifp.shared.PersonaMenuUseCase;
 import com.ifp.shared.port.PersonaMenuPort;
-import com.ifp.texto.application.PersonaCreateUseCase;
+import com.ifp.texto.application.PersonaFicheroCreateUseCase;
 import com.ifp.texto.application.PersonaFicheroAlmacenarUseCase;
 import com.ifp.texto.application.PersonaFicheroLeerUseCase;
-import com.ifp.texto.application.port.PersonaCreatePort;
+import com.ifp.texto.application.port.PersonaFicheroCreatePort;
 import com.ifp.texto.application.port.PersonaFicheroAlmacenarPort;
 import com.ifp.texto.application.port.PersonaFicheroLeerPort;
 
@@ -64,11 +64,11 @@ public class Main {
     }
 
     /**
-     * @return PersonaCreatePort
+     * @return PersonaFicheroCreatePort
      */
-    static PersonaCreatePort personaCreatePort() {
-        PersonaCreatePort personaCreatePort = new PersonaCreateUseCase();
-        return personaCreatePort;
+    static PersonaFicheroCreatePort personaCreatePort() {
+        PersonaFicheroCreatePort personaFicheroCreatePort = new PersonaFicheroCreateUseCase();
+        return personaFicheroCreatePort;
     }
 
     /**

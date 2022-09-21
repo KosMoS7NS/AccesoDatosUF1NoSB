@@ -5,10 +5,9 @@ import java.util.List;
 /**
  * Puerto con el método de creación de Personas.
  */
-public interface PersonaCreatePort {
+public interface PersonaFicheroCreatePort {
 
     /**
-     *
      * @return List
      * @throws Exception
      */
