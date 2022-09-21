@@ -18,6 +18,19 @@ import com.ifp.texto.application.port.PersonaFicheroLeerPort;
 import static com.ifp.shared.configuration.PersonaStaticConfig.NOMBRE;
 import static com.ifp.shared.configuration.PersonaStaticConfig.RUTA;
 
+/**
+ * Este proyecto se realiza mediante una Arquitectura Hexagonal para no exponer las Entidades.
+ * <p>
+ * PersonaBinarioNoEntity es referenciada como Entity, para demostrar como se organizaría el proyecto con una BBDD
+ * <p>
+ * Las interfaces son referenciadas como Ports.
+ * <p>
+ * Las clases con métodos son referencias como Use Case.
+ * <p>
+ * No se utilizan controladores con peticiones POST/GET ya que no es el objetivo de este ejercicio.
+ * <p>
+ * @author Daniel Díez Miguel
+ */
 public class Main {
 
     public static void main(String[] args) throws Exception {

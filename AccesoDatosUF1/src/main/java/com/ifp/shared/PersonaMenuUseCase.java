@@ -2,8 +2,6 @@ package com.ifp.shared;
 
 import com.ifp.shared.configuration.PersonaStaticConfig;
 import com.ifp.shared.port.PersonaMenuPort;
-
-
 import java.util.Scanner;
 
 import static com.ifp.shared.configuration.PersonaStaticConfig.*;
