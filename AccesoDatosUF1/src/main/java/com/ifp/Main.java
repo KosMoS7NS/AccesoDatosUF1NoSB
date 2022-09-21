@@ -29,52 +29,83 @@ import static com.ifp.shared.configuration.PersonaStaticConfig.RUTA;
  * <p>
  * No se utilizan controladores con peticiones POST/GET ya que no es el objetivo de este ejercicio.
  * <p>
+ *
  * @author Daniel Díez Miguel
  */
 public class Main {
 
+    /**
+     * @param args
+     * @throws Exception
+     */
     public static void main(String[] args) throws Exception {
 
-        switch (personaMenuPort().menu()) {
-            case 1 -> personaFicheroAlmacenarPort().almacenarFichero(personaCreatePort().createPersona());
-            case 2 -> personaBinarioAlmacenarPort().almacenarBinario(personaBinarioCreatePort().createPersona());
-            case 4 -> System.out.println(personaFicheroLeerPort().leerFichero(RUTA));
-            case 5 -> System.out.println(personaFicheroLeerPort().leerFicheroNombre(RUTA, NOMBRE));
-            case 6 -> System.out.println(personaBinarioLeerPort().leerBinario(RUTA));
-            case 7 -> System.out.println(personaBinarioLeerPort().leerFicheroNombre(RUTA, NOMBRE));
+        int i = 1;
+        while (i != 0) {
+            switch (personaMenuPort().menu()) {
+                case 0 -> i = 0;
+                case 1 -> personaFicheroAlmacenarPort().almacenarFichero(personaCreatePort().createPersona());
+                case 2 -> personaBinarioAlmacenarPort().almacenarBinario(personaBinarioCreatePort().createPersona());
+                case 4 -> System.out.println(personaFicheroLeerPort().leerFichero(RUTA));
+                case 5 -> System.out.println(personaFicheroLeerPort().leerFicheroNombre(RUTA, NOMBRE));
+                case 6 -> System.out.println(personaBinarioLeerPort().leerBinario(RUTA));
+                case 7 -> System.out.println(personaBinarioLeerPort().leerFicheroNombre(RUTA, NOMBRE));
+            }
         }
+
     }
 
+    /**
+     * @return PersonaMenuPort
+     */
     static PersonaMenuPort personaMenuPort() {
         PersonaMenuPort personaMenuPort = new PersonaMenuUseCase();
         return personaMenuPort;
     }
 
+    /**
+     * @return PersonaCreatePort
+     */
     static PersonaCreatePort personaCreatePort() {
         PersonaCreatePort personaCreatePort = new PersonaCreateUseCase();
         return personaCreatePort;
     }
 
+    /**
+     * @return PersonaFicheroAlmacenarPort
+     */
     static PersonaFicheroAlmacenarPort personaFicheroAlmacenarPort() {
         PersonaFicheroAlmacenarPort personaFicheroAlmacenarPort = new PersonaFicheroAlmacenarUseCase();
         return personaFicheroAlmacenarPort;
     }
 
+    /**
+     * @return PersonaBinarioCreatePort
+     */
     static PersonaBinarioCreatePort personaBinarioCreatePort() {
         PersonaBinarioCreatePort personaBinarioCreatePort = new PersonaBinarioCreateUseCase();
         return personaBinarioCreatePort;
     }
 
+    /**
+     * @return PersonaBinarioAlmacenarPort
+     */
     static PersonaBinarioAlmacenarPort personaBinarioAlmacenarPort() {
         PersonaBinarioAlmacenarPort personaBinarioAlmacenarPort = new PersonaBinarioAlmacenarUseCase();
         return personaBinarioAlmacenarPort;
     }
 
+    /**
+     * @return PersonaFicheroLeerPort
+     */
     static PersonaFicheroLeerPort personaFicheroLeerPort() {
         PersonaFicheroLeerPort personaFicheroLeerPort = new PersonaFicheroLeerUseCase();
         return personaFicheroLeerPort;
     }
 
+    /**
+     * @return PersonaBinarioLeerPort
+     */
     static PersonaBinarioLeerPort personaBinarioLeerPort() {
         PersonaBinarioLeerPort personaBinarioLeerPort = new PersonaBinarioLeerUseCase();
         return personaBinarioLeerPort;

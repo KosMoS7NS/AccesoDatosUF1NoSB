@@ -12,7 +12,7 @@ import javax.annotation.processing.Generated;
 
 @Generated(
     value = "org.mapstruct.ap.MappingProcessor",
-    date = "2022-09-21T13:56:49+0200",
+    date = "2022-09-21T17:11:15+0200",
     comments = "version: 1.5.2.Final, compiler: javac, environment: Java 17.0.3.1 (Oracle Corporation)"
 )
 public class PersonaMapperPortImpl implements PersonaMapperPort {
