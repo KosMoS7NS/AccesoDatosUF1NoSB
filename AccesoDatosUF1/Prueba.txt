@@ -1,4 +1,0 @@
-PersonaOutputDTO(nombre=fes, apellidos=fse, ciudad=fse, nacionalidad=fse, edad=34)
-PersonaOutputDTO(nombre=fs, apellidos=fse, ciudad=fes, nacionalidad=fse, edad=34)
-PersonaOutputDTO(nombre=fes, apellidos=fe, ciudad=fse, nacionalidad=fse, edad=43)
-
