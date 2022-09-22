@@ -6,7 +6,6 @@ import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
 
-import static com.ifp.shared.configuration.PersonaStaticConfig.NOMBRE;
 
 /**
  * Esta clase esta compuesta por dos métodos.
@@ -52,7 +51,7 @@ public class PersonaBinarioLeerUseCase implements PersonaBinarioLeerPort {
         while ((lineaTextoFichero = bufferedReader.readLine()) != null) {
             String[] infoSplit = lineaTextoFichero.split("=");
 
-            if (infoSplit.length > 1 && NOMBRE.equalsIgnoreCase(infoSplit[1]
+            if (infoSplit.length > 1 && nombre.equalsIgnoreCase(infoSplit[1]
                     .substring(0, infoSplit[1].length() - 11)))
                 personaList.add(System.lineSeparator() + lineaTextoFichero);
 
