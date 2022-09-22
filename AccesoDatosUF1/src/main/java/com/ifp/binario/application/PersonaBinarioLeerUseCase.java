@@ -5,6 +5,7 @@ import com.ifp.binario.application.port.PersonaBinarioLeerPort;
 import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Scanner;
 
 
 /**
@@ -38,26 +39,28 @@ public class PersonaBinarioLeerUseCase implements PersonaBinarioLeerPort {
     }
 
     /**
-     * @param ruta Ruta del fichero.dat
+     * @param ruta   Ruta del fichero.dat
      * @param nombre Nombre de la persona a buscar en el fichero.dat
      * @return List
      * @throws IOException
      */
     @Override
-    public List leerFicheroNombre(String ruta, String nombre) throws IOException, ClassNotFoundException {
-        BufferedReader bufferedReader = new BufferedReader(new FileReader(new File(ruta)));
+    public List leerFicheroNombre(String ruta, String nombre) throws IOException {
+        InputStream inputStream = new FileInputStream(new File(ruta));
+        Scanner scanner = new Scanner(inputStream);
         String lineaTextoFichero = "";
 
-        while ((lineaTextoFichero = bufferedReader.readLine()) != null) {
-            String[] infoSplit = lineaTextoFichero.split("=");
+        while (scanner.hasNextLine()) {
+            String linea = scanner.nextLine();
+            String[] infoSplit = linea.split("=");
 
             if (infoSplit.length > 1 && nombre.equalsIgnoreCase(infoSplit[1]
                     .substring(0, infoSplit[1].length() - 11)))
-                personaList.add(System.lineSeparator() + lineaTextoFichero);
+                personaList.add(System.lineSeparator() + linea);
 
         }
 
-        bufferedReader.close();
+        inputStream.close();
         return personaList;
 
     }
