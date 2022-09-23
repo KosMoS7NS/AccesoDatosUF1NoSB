@@ -61,7 +61,8 @@ public class PersonaMenuUseCase implements PersonaMenuPort {
                         if (respuesta == 4 || respuesta == 6) return respuesta;
                         if (respuesta == 5 || respuesta == 7) {
                             System.out.println("Introduce el nombre de la Persona: ");
-                            NOMBRE = scanner.next();
+                            scanner.nextLine();
+                            NOMBRE = scanner.nextLine();
                             return respuesta;
 
                         }
