@@ -7,6 +7,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
+import static java.lang.System.*;
+
 
 /**
  * Esta clase esta compuesta por dos métodos.
@@ -56,7 +58,7 @@ public class PersonaBinarioLeerUseCase implements PersonaBinarioLeerPort {
 
             if (infoSplit.length > 1 && nombre.equalsIgnoreCase(infoSplit[1]
                     .substring(0, infoSplit[1].length() - 11)))
-                personaList.add(System.lineSeparator() + linea);
+                personaList.add(lineSeparator() + linea);
 
         }
 
